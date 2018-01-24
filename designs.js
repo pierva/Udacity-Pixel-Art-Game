@@ -1,16 +1,11 @@
 
-// When size is submitted by the user, call makeGrid()
-var color = "#0058e8";
+var color = "#0058e8"; //Default color of the picker
 
-// function getColor(){
-//   var color = document.getElementById('colorPicker').value;
-//   console.log(color);
-//   return color;
-// }
 $("#colorPicker").on('change', function() {
   color = $(this).val();
 });
 
+//Get form inputs with get method and create an object
 function getInputs(){
   const url = document.URL;
   let obj = {};
@@ -21,6 +16,7 @@ function getInputs(){
   return obj;
 }
 
+//Create a dynamic table based on the user inputs
 function makeGrid() {
   const width = getInputs().width;
   const height = getInputs().height;
@@ -34,15 +30,10 @@ function makeGrid() {
   }
   let table = $("#pixel_canvas").append(designCanvas);
 }
-
+//Add event listener to the submit button
 $("input[type=submit]").on("click", makeGrid());
 
-// $('td').hover(function(){
-//     $(this).css("background-color", color);
-//     }, function() {
-//     $(this).css("background-color", "transparent");
-//     });
-
+//Add event listener to the mouse actions
 $('td').bind('mouseenter mouseleave mousedown', function(event){
     if(event.type === 'mouseenter'){
         $(this).css("background-color", color);
