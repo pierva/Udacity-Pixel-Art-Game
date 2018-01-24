@@ -13,6 +13,7 @@ function getInputs(){
   obj.width = parseInt(url.split('?')[1].split('&')[1].split('=')[1]);
   $("#input_height").val(obj.height);
   $("#input_width").val(obj.width);
+  console.log(obj);
   return obj;
 }
 

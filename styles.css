@@ -1,5 +1,9 @@
+html{
+  height: 100%;
+}
 body {
     text-align: center;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -41,13 +45,20 @@ form {
 
 input[type=number] {
     width: 6em;
-    background: #323282;
+    background: #8a8c91;
     font-size: 16px;
     text-align: center;
     font-weight: bold;
-    color: #FFFFFF;
+    padding: 3px;
+}
+
+input[type=submit]{
+  margin-left: 10px;
+  padding: 4px;
+  width: 6em;
 }
 .grad{
     background: #36368c;
-    background: linear-gradient(to bottom right, #36368c, #222223);
+    /* background: linear-gradient(to bottom right, #36368c, #222223); */
+    background: linear-gradient(to bottom right, #8a8c91, #222223);
 }
